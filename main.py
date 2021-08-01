@@ -114,7 +114,7 @@ class CalculatorCtrl:
 
         try:
             result = str(eval(expression, {}, {}))
-        except SyntaxError:
+        except SyntaxError and ZeroDivisionError:
             result = self.error_msg
 
         # Setting the result.
